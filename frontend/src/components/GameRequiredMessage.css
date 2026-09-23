@@ -1,0 +1,28 @@
+.game-required {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 24px 80px;
+  background: linear-gradient(160deg, var(--color-bg-dark), var(--color-bg-mid));
+  text-align: center;
+}
+
+.game-required__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--color-white);
+}
+
+.game-required__text {
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.game-required__text strong {
+  color: var(--color-green-soft);
+}

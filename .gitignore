@@ -1,0 +1,44 @@
+# Dependencias
+node_modules/
+dist/
+dist-ssr/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Python (backend futuro)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build
+*.local
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Permitir plantillas de variables de entorno
+!.env.example
+!frontend/.env.example
+
+# Configuración local de Claude
+.claude/

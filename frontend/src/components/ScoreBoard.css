@@ -1,0 +1,68 @@
+.scoreboard {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scoreboard--tv {
+  justify-content: center;
+  gap: 24px;
+}
+
+.scoreboard--tv .scoreboard__item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.scoreboard--compact {
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scoreboard--compact .scoreboard__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.scoreboard__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.scoreboard__name {
+  font-weight: 700;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.scoreboard--tv .scoreboard__name {
+  color: var(--color-white);
+}
+
+.scoreboard__score {
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--color-green-soft);
+}
+
+.scoreboard--compact .scoreboard__score {
+  color: var(--color-green);
+  font-size: 0.85rem;
+}
+
+.scoreboard--tv .scoreboard__score {
+  font-size: 1.1rem;
+}

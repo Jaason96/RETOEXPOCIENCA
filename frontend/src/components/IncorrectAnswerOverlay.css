@@ -1,0 +1,53 @@
+.incorrect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 22, 40, 0.72);
+  animation: incorrectFadeIn 0.25s ease forwards;
+}
+
+.incorrect-overlay--exiting {
+  animation: incorrectFadeOut 0.25s ease forwards;
+}
+
+.incorrect-overlay__card {
+  background: linear-gradient(135deg, #5c1a1a, #8b2222);
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-xl);
+  padding: 32px 40px;
+  text-align: center;
+  max-width: 560px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.incorrect-overlay__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #ffd0d0;
+  margin-bottom: 10px;
+}
+
+.incorrect-overlay__player {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+
+.incorrect-overlay__hint {
+  font-weight: 700;
+  color: var(--color-green-soft);
+}
+
+@keyframes incorrectFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes incorrectFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

@@ -1,0 +1,64 @@
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+  position: relative;
+  min-width: 140px;
+}
+
+.player-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--player-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.player-card--selected {
+  border-color: var(--player-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--player-color) 40%, transparent);
+}
+
+.player-card__number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--player-color);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--player-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.player-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-white);
+}

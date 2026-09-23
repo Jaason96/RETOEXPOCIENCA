@@ -1,0 +1,47 @@
+.buzz-active-banner {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 8px 16px;
+
+  border-radius: var(--radius-lg);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+
+.buzz-active-banner__icon {
+
+  font-size: 0.95rem;
+
+}
+
+
+
+.buzz-active-banner__text {
+
+  font-family: var(--font-display);
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+}
+
+

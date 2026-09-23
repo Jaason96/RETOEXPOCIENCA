@@ -1,0 +1,6 @@
+# Coloca aquí las imágenes del colegio
+
+- `logo-colegio.png` — Escudo institucional del Colegio La Nueva Esperanza
+- `neo-esperancita.png` — Imagen de las mascotas Neo y Esperancita
+
+Estas rutas se sirven en el navegador como `/assets/logo-colegio.png` y `/assets/neo-esperancita.png`.

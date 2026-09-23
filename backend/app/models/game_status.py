@@ -1,0 +1,11 @@
+from enum import StrEnum
+
+
+class GameStatus(StrEnum):
+    LOBBY = "LOBBY"
+    QUESTION = "QUESTION"
+    BUZZ_OPEN = "BUZZ_OPEN"
+    BUZZ_LOCKED = "BUZZ_LOCKED"
+    ANSWER_RESULT = "ANSWER_RESULT"
+    SCOREBOARD = "SCOREBOARD"
+    FINISHED = "FINISHED"

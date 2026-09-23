@@ -1,0 +1,26 @@
+.timer-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timer-circle__track {
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+.timer-circle__progress {
+  stroke: var(--color-green-soft);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+  filter: drop-shadow(0 0 6px rgba(130, 190, 134, 0.5));
+}
+
+.timer-circle__value {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--color-white);
+}

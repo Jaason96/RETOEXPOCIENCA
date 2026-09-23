@@ -1,0 +1,126 @@
+.mascot-img {
+  object-fit: contain;
+}
+
+.mascot-img--small {
+  height: 80px;
+  width: auto;
+}
+
+.mascot-img--medium {
+  height: 160px;
+  width: auto;
+}
+
+.mascot-img--large {
+  height: 220px;
+  width: auto;
+}
+
+.mascot-placeholder {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  position: relative;
+}
+
+.mascot-placeholder--small {
+  gap: 8px;
+}
+
+.mascot-placeholder--large {
+  gap: 20px;
+}
+
+.mascot-placeholder__char {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mascot-placeholder__head {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd89b, #f0b860);
+  border: 2px solid var(--color-white);
+}
+
+.mascot-placeholder--small .mascot-placeholder__head {
+  width: 28px;
+  height: 28px;
+}
+
+.mascot-placeholder--medium .mascot-placeholder__head {
+  width: 44px;
+  height: 44px;
+}
+
+.mascot-placeholder--large .mascot-placeholder__head {
+  width: 56px;
+  height: 56px;
+}
+
+.mascot-placeholder__coat {
+  background: var(--color-blue);
+  border-radius: 8px 8px 4px 4px;
+  border: 2px solid var(--color-white);
+  position: relative;
+}
+
+.mascot-placeholder--small .mascot-placeholder__coat {
+  width: 32px;
+  height: 36px;
+}
+
+.mascot-placeholder--medium .mascot-placeholder__coat {
+  width: 50px;
+  height: 56px;
+}
+
+.mascot-placeholder--large .mascot-placeholder__coat {
+  width: 64px;
+  height: 72px;
+}
+
+.mascot-placeholder__coat::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--color-green-soft);
+  border-radius: 50%;
+}
+
+.mascot-placeholder__char--neo .mascot-placeholder__head {
+  background: linear-gradient(180deg, #c8e6ff, #8ec5f0);
+}
+
+.mascot-placeholder__char--esperancita .mascot-placeholder__head {
+  background: linear-gradient(180deg, #ffc8e0, #f0a0c0);
+}
+
+.mascot-placeholder__name {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+.mascot-placeholder__hint {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mascot-placeholder--small .mascot-placeholder__hint {
+  display: none;
+}

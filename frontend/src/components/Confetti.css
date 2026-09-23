@@ -1,0 +1,26 @@
+.confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confetti__piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  animation: confettiFall linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0.3;
+  }
+}

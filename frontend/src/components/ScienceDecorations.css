@@ -1,0 +1,196 @@
+.science-decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Molecules */
+.science-decor__molecule {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-decor__molecule span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  opacity: 0.4;
+  box-shadow: 0 0 10px rgba(1, 142, 224, 0.3);
+}
+
+.science-decor__molecule--1 {
+  top: 12%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.science-decor__molecule--1 span:nth-child(2) {
+  background: var(--color-green-soft);
+  width: 24px;
+  height: 24px;
+}
+
+.science-decor__molecule--2 {
+  top: 20%;
+  right: 10%;
+  animation-delay: -2s;
+}
+
+.science-decor__molecule--2 span {
+  width: 14px;
+  height: 14px;
+  background: var(--color-green-soft);
+  opacity: 0.35;
+}
+
+/* Atoms */
+.science-decor__atom {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.science-decor__atom--1 {
+  bottom: 25%;
+  left: 5%;
+  animation-delay: -1s;
+}
+
+.science-decor__atom--2 {
+  top: 35%;
+  right: 6%;
+  width: 45px;
+  height: 45px;
+  animation-delay: -3s;
+}
+
+.science-decor__nucleus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  opacity: 0.5;
+}
+
+.science-decor__orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(1, 142, 224, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 10s linear infinite;
+}
+
+.science-decor__orbit--1 {
+  width: 50px;
+  height: 30px;
+}
+
+.science-decor__orbit--2 {
+  width: 40px;
+  height: 50px;
+  animation-direction: reverse;
+  animation-duration: 7s;
+}
+
+/* Test tubes */
+.science-decor__tube {
+  position: absolute;
+  width: 14px;
+  border-radius: 0 0 8px 8px;
+  opacity: 0.3;
+  animation: float 5s ease-in-out infinite;
+}
+
+.science-decor__tube::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.science-decor__tube--1 {
+  height: 50px;
+  bottom: 15%;
+  right: 15%;
+  background: linear-gradient(180deg, var(--color-green-soft), var(--color-green));
+  animation-delay: -1.5s;
+}
+
+.science-decor__tube--2 {
+  height: 40px;
+  top: 15%;
+  left: 18%;
+  background: linear-gradient(180deg, var(--color-blue-light), var(--color-blue));
+  animation-delay: -2.5s;
+}
+
+/* Bubbles */
+.science-decor__bubble {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  animation: rise 8s ease-in infinite;
+}
+
+.science-decor__bubble--1 { width: 20px; height: 20px; bottom: 10%; left: 25%; animation-delay: 0s; }
+.science-decor__bubble--2 { width: 14px; height: 14px; bottom: 5%; left: 40%; animation-delay: -2s; }
+.science-decor__bubble--3 { width: 24px; height: 24px; bottom: 8%; right: 30%; animation-delay: -4s; }
+.science-decor__bubble--4 { width: 10px; height: 10px; bottom: 15%; right: 20%; animation-delay: -1s; }
+.science-decor__bubble--5 { width: 16px; height: 16px; bottom: 3%; left: 60%; animation-delay: -3s; }
+
+/* Particles */
+.science-decor__particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-green-soft);
+  opacity: 0.5;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.science-decor__particle--1 { top: 10%; left: 30%; animation-delay: 0s; }
+.science-decor__particle--2 { top: 50%; left: 12%; animation-delay: -0.5s; background: var(--color-blue-light); }
+.science-decor__particle--3 { top: 70%; right: 25%; animation-delay: -1s; }
+.science-decor__particle--4 { top: 25%; right: 35%; animation-delay: -1.5s; background: var(--color-blue-light); }
+.science-decor__particle--5 { bottom: 30%; left: 45%; animation-delay: -2s; }
+.science-decor__particle--6 { top: 40%; left: 55%; animation-delay: -2.5s; background: var(--color-blue-light); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-120px) scale(0.5); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.5); }
+}

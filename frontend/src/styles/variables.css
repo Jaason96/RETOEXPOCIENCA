@@ -1,0 +1,30 @@
+:root {
+  --color-blue: #018ee0;
+  --color-blue-dark: #016bb3;
+  --color-blue-light: #4db3f0;
+  --color-green: #009256;
+  --color-green-dark: #006e42;
+  --color-green-soft: #82be86;
+  --color-green-light: #b8e0bb;
+  --color-white: #ffffff;
+  --color-bg-dark: #0a1628;
+  --color-bg-mid: #0f2240;
+  --color-text: #1a2b4a;
+  --color-text-light: #f0f7ff;
+
+  --answer-a: #018ee0;
+  --answer-b: #009256;
+  --answer-c: #e6a817;
+  --answer-d: #d94f4f;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-soft: 0 4px 20px rgba(1, 142, 224, 0.15);
+  --shadow-glow: 0 0 30px rgba(1, 142, 224, 0.3);
+}

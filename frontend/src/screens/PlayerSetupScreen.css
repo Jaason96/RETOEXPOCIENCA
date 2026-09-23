@@ -1,0 +1,200 @@
+.player-setup {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--color-bg-dark), var(--color-bg-mid));
+  padding: 40px 32px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.player-setup__top-bar {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  padding-top: 8px;
+  padding-right: 120px;
+}
+
+.player-setup__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-setup__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--color-white);
+}
+
+.player-setup__subtitle {
+  color: var(--color-green-soft);
+  font-weight: 600;
+}
+
+.player-setup__count-section,
+.player-setup__players-section,
+.player-setup__set-section {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-setup__set-select {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.player-setup__set-select option {
+  color: #0a1628;
+}
+
+.player-setup__set-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: rgba(1, 142, 224, 0.12);
+  border: 1px solid rgba(1, 142, 224, 0.25);
+  text-align: center;
+}
+
+.player-setup__set-card-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+.player-setup__set-card-count {
+  color: var(--color-green-soft);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.player-setup__set-card-description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.player-setup__set-loading {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.player-setup__count-section,
+.player-setup__players-section {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-setup__section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.player-setup__count-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-setup__count-btn {
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.player-setup__count-btn:hover {
+  border-color: var(--color-blue-light);
+  background: rgba(1, 142, 224, 0.15);
+}
+
+.player-setup__count-btn--active {
+  border-color: var(--color-blue);
+  background: var(--color-blue);
+  box-shadow: 0 4px 16px rgba(1, 142, 224, 0.3);
+}
+
+.player-setup__inputs {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-setup__error {
+  color: #ffb4b4;
+  background: rgba(217, 79, 79, 0.15);
+  border: 1px solid rgba(217, 79, 79, 0.35);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  max-width: 520px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.player-setup__start-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.player-setup__start-btn {
+  padding: 18px 48px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 0 #015a9e, 0 8px 24px rgba(1, 142, 224, 0.3);
+  transition: all 0.25s ease;
+  margin-top: 12px;
+}
+
+.player-setup__start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 #015a9e, 0 12px 32px rgba(1, 142, 224, 0.4);
+}
+
+.player-setup__start-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #015a9e;
+}
+
+@media (max-width: 640px) {
+  .player-setup__top-bar {
+    padding-right: 0;
+    padding-top: 52px;
+  }
+}

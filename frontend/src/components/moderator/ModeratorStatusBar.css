@@ -1,0 +1,122 @@
+.moderator-status-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.moderator-status-bar__brand {
+  min-width: 0;
+}
+
+.moderator-status-bar__event {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.2;
+}
+
+.moderator-status-bar__institution {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.moderator-status-bar__progress-block {
+  min-width: 0;
+}
+
+.moderator-status-bar__question-count {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-green-soft);
+}
+
+.moderator-status-bar__progress-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.moderator-status-bar__progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-blue), var(--color-green-soft));
+  transition: width 0.4s ease;
+}
+
+.moderator-status-bar__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.moderator-status-bar__status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.moderator-status-bar__status--open {
+  background: rgba(0, 146, 86, 0.18);
+  border-color: rgba(0, 146, 86, 0.45);
+  color: #8ef0c4;
+}
+
+.moderator-status-bar__status--open .moderator-status-bar__status-dot {
+  background: var(--color-green-soft);
+  box-shadow: 0 0 10px rgba(0, 146, 86, 0.8);
+}
+
+.moderator-status-bar__status--locked {
+  background: rgba(230, 168, 23, 0.18);
+  border-color: rgba(230, 168, 23, 0.45);
+  color: #ffd978;
+}
+
+.moderator-status-bar__status--locked .moderator-status-bar__status-dot {
+  background: var(--color-yellow);
+}
+
+.moderator-status-bar__status--result {
+  background: rgba(1, 142, 224, 0.18);
+  border-color: rgba(1, 142, 224, 0.45);
+  color: #9bd8ff;
+}
+
+.moderator-status-bar__status--result .moderator-status-bar__status-dot {
+  background: var(--color-blue);
+}
+
+@media (max-width: 960px) {
+  .moderator-status-bar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .moderator-status-bar__status {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .moderator-status-bar {
+    padding: 16px;
+  }
+}
